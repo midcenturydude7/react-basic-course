@@ -8,4 +8,42 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(to bottom right, #1c2742, #000000);
+  height: 100vh;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  padding: 2em 1.5em;
+  color: whitesmoke;
+  background: #ffffff0a;
+  border-bottom: 1px solid #c7c7c725;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7rem;
+  color: whitesmoke;
+  padding: 2em 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer {
+  width: 100%;
+  padding: 2.25em 0;
+  color: whitesmoke;
+  border-top: 1px solid #c7c7c725;
+  background: #ffffff0a;
+  text-align: center;
 }
