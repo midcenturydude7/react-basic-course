@@ -43,7 +43,12 @@ body {
   padding: 0.25em;
   background: rgba(255, 255, 255, 0.0392156863);
 }
-.layout .main .main-button {
+.layout .main .button-container {
+  display: flex;
+  flex-direction: row;
+}
+.layout .main .button-container .main-button {
+  min-width: 100px;
   margin-top: 2em;
   color: whitesmoke;
   padding: 0.5em;
@@ -52,6 +57,9 @@ body {
   border: 1px solid rgba(199, 199, 199, 0.1450980392);
   border-radius: 3px;
   cursor: pointer;
+}
+.layout .main .button-container .main-button + .main-button {
+  margin-left: 1em;
 }
 .layout .footer {
   width: 100%;

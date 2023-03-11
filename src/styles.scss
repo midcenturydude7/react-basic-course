@@ -45,15 +45,25 @@ body {
       background: #ffffff0a;
     }
 
-    .main-button {
-      margin-top: 2em;
-      color: whitesmoke;
-      padding: 0.5em;
-      font-size: 2rem;
-      background: #ffffff0a;
-      border: 1px solid #c7c7c725;
-      border-radius: 3px;
-      cursor: pointer;
+    .button-container {
+      display: flex;
+      flex-direction: row;
+
+      .main-button {
+        min-width: 100px;
+        margin-top: 2em;
+        color: whitesmoke;
+        padding: 0.5em;
+        font-size: 2rem;
+        background: #ffffff0a;
+        border: 1px solid #c7c7c725;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      .main-button + .main-button {
+        margin-left: 1em;
+      }
     }
   }
 
