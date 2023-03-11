@@ -12,14 +12,19 @@ function Main() {
       setCount(count - 1);
     }
   }
+
   return (
     <div className="main">
-      <h1 className="main-title">Total: <span>{count}</span> </h1>
+      <h1 className="main-title">
+        Total: <span>{count}</span>{" "}
+      </h1>
       <div className="button-container">
         <button className="main-button" onClick={handleIncrement}>
           +
         </button>
-        <button className="main-button" onClick={handleDecrement}>
+        <button
+          className={count > 0 ? "main-button" : "main-button-disabled"}
+          onClick={handleDecrement}>
           -
         </button>
       </div>

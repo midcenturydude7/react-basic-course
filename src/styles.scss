@@ -70,6 +70,19 @@ body {
       .main-button + .main-button {
         margin-left: 1em;
       }
+
+      .main-button-disabled {
+        margin-left: 1em;
+        min-width: 100px;
+        margin-top: 2em;
+        color: whitesmoke;
+        padding: 0.5em;
+        font-size: 2rem;
+        cursor: normal;
+        border: 1px solid #c7c7c725;
+        border-radius: 3px;
+        background: #ffffff1a;
+      }
     }
   }
 
