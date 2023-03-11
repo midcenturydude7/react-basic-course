@@ -34,13 +34,15 @@ body {
   justify-content: center;
 }
 .layout .main .main-title {
-  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  min-width: 550px;
   text-transform: uppercase;
   color: whitesmoke;
   font-size: 7rem;
   font-weight: 600;
   border: 1px solid rgba(199, 199, 199, 0.1450980392);
-  padding: 0.25em;
+  padding: 0.25em 0.3em;
   background: rgba(255, 255, 255, 0.0392156863);
 }
 .layout .main .button-container {
@@ -57,6 +59,9 @@ body {
   border: 1px solid rgba(199, 199, 199, 0.1450980392);
   border-radius: 3px;
   cursor: pointer;
+}
+.layout .main .button-container .main-button:hover {
+  background: rgba(255, 255, 255, 0.1843137255);
 }
 .layout .main .button-container .main-button + .main-button {
   margin-left: 1em;
