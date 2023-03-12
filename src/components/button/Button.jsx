@@ -1,10 +1,8 @@
 import React from "react";
 
-function Button({ handleChange }) {
-  <div>
-    <button className="main-button" onClick={handleChange}>
-      Counter
-    </button>
+function Button({ count, setCount }) {
+  <div className="button-container">
+    <button onClick={() => setCount(count + 1)}>+</button>
   </div>;
 }
 
