@@ -1,31 +1,8 @@
 import React from "react";
+import useCounter from "../../hooks/useCounter";
 
 function Main() {
-  const [count, setCount] = React.useState(0);
-  const [newTodoValue, setNewTodoValue] = React.useState("");
-  const [todosList, setTodosList] = React.useState([]);
-
-  function handleIncrement() {
-    setCount(count + 1);
-  }
-
-  function handleDecrement() {
-    if (count > 0) {
-      setCount(count - 1);
-    }
-  }
-
-  function handleChange(e) {
-    setNewTodoValue(e.target.value);
-  }
-
-  function addTodo(e) {
-    e.preventDefault();
-    setTodosList((prevTodosList) => [...prevTodosList, newTodoValue]);
-    setNewTodoValue("");
-  }
-
-  const allTodos = todosList.map((todo) => <p key={todo}>{todo}</p>);
+  const { count, handleIncrement, handleDecrement } = useCounter();
 
   return (
     <div className="main">
@@ -41,19 +18,6 @@ function Main() {
           onClick={handleDecrement}>
           -
         </button>
-      </div>
-      <h1 className="main-title">To Do:</h1>
-      <div className="todo-container">
-        <form action="#">
-          <input
-            type="text"
-            name="todo"
-            value={newTodoValue}
-            onChange={handleChange}
-          />
-          <button onClick={addTodo}>Add todo item</button>
-        </form>
-        {allTodos}
       </div>
     </div>
   );
