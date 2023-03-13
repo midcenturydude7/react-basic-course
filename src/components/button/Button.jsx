@@ -1,19 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-function Button({ count, action, text }) {
+
+function Button({ className, action, text }) {
   return (
-    <button
-      className={
-        text === "-" && count === 0 ? "main-button-disabled" : "main-button"
-      }
-      onClick={action}>
+    <button className={className} onClick={action}>
       {text}
     </button>
   );
 }
 
 Button.propTypes = {
-  count: PropTypes.count,
+  className: PropTypes.className,
   action: PropTypes.action,
   text: PropTypes.text,
 };

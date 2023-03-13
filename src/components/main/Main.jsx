@@ -12,9 +12,17 @@ function Main() {
         Total: <span>{count}</span>{" "}
       </h1>
       <div className="button-container">
-        <Button text={"+"} action={handleIncrement} />
-        <Button text={"-"} action={handleDecrement} />
-        <Button text={"Reset"} action={resetCount} />
+        <Button className="main-button" text={"+"} action={handleIncrement} />
+        <Button
+          className={count > 0 ? "main-button" : "main-button-disabled"}
+          text={"-"}
+          action={handleDecrement}
+        />
+        <Button
+          className={count > 0 ? "main-button" : "main-button-disabled"}
+          text={"Reset"}
+          action={resetCount}
+        />
       </div>
     </div>
   );
