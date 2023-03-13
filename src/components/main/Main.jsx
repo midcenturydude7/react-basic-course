@@ -1,22 +1,10 @@
 import React from "react";
 import Button from "../button/Button";
+import useCounter from "../../hooks/useCounter";
 
 function Main() {
-  const [count, setCount] = React.useState(0);
-
-  function handleIncrement() {
-    setCount(count + 1);
-  }
-
-  function handleDecrement() {
-    if (count > 0) {
-      setCount(count - 1);
-    }
-  }
-
-  function resetCount() {
-    setCount(0);
-  }
+  // Custom hook that handles business logic for counter/reset btns
+  const { count, resetCount, handleIncrement, handleDecrement } = useCounter();
 
   return (
     <div className="main">
@@ -24,12 +12,9 @@ function Main() {
         Total: <span>{count}</span>{" "}
       </h1>
       <div className="button-container">
-        <Button title={"+"} action={handleIncrement} />
-        <Button
-          title={"-"}
-          action={handleDecrement}
-        />
-        <Button title={"Reset"} action={resetCount} />
+        <Button text={"+"} action={handleIncrement} />
+        <Button text={"-"} action={handleDecrement} />
+        <Button text={"Reset"} action={resetCount} />
       </div>
     </div>
   );

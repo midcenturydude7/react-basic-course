@@ -1,20 +1,21 @@
 import React from "react";
-
-function Button({ count, action, title }) {
-  function checkClassName() {
-    let className = "";
-    if (title === "-" || "Reset" && count === 0) {
-      className = "main-button-disabled";
-    }
-  }
-
+import PropTypes from "prop-types";
+function Button({ count, action, text }) {
   return (
     <button
-      className={title === "+" ? "main-button" : "main-button-disabled"}
+      className={
+        text === "-" && count === 0 ? "main-button-disabled" : "main-button"
+      }
       onClick={action}>
-      {title}
+      {text}
     </button>
   );
 }
+
+Button.propTypes = {
+  count: PropTypes.count,
+  action: PropTypes.action,
+  text: PropTypes.text,
+};
 
 export default Button;

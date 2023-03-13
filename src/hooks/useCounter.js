@@ -12,7 +12,12 @@ function useCounter() {
       setCount(count - 1);
     }
   }
-  return { count, handleIncrement, handleDecrement };
+
+  function resetCount() {
+    setCount(0);
+  }
+
+  return { count, resetCount, handleIncrement, handleDecrement };
 }
 
 export default useCounter;
