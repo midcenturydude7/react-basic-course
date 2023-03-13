@@ -25,7 +25,10 @@ function Main() {
       </h1>
       <div className="button-container">
         <Button title={"+"} action={handleIncrement} />
-        <Button title={"-"} action={handleDecrement} />
+        <Button
+          title={"-"}
+          action={handleDecrement}
+        />
         <Button title={"Reset"} action={resetCount} />
       </div>
     </div>
